@@ -3,7 +3,6 @@ import Lottie from "react-lottie";
 import Link from "../src/Link";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import { cloneDeep } from "lodash";
 import Button from "@material-ui/core/Button";
 import ButtonArrow from "../src/ui/ButtonArrow";
 import Typography from "@material-ui/core/Typography";
@@ -14,12 +13,12 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import CallToAction from "../src/ui/CallToAction";
 
-import landingAnimationData from "../public/landinganimation/data.json";
+import landingAnimationData from "../public/animations/landinganimation/data.json";
 
 const useStyles = makeStyles((theme) => ({
   animation: {
     maxWidth: "50em",
-    minWidth: "21em",
+    minWidth: "20em",
     marginTop: "2em",
     marginLeft: "10%",
     [theme.breakpoints.down("sm")]: {

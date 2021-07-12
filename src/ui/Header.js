@@ -6,8 +6,8 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import { makeStyles } from "@material-ui/core/styles";
-import logo from "../../assets/logo.svg";
-import Link from "../src/Link";
+import Link from "@material-ui/core/Link";
+
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -67,6 +67,7 @@ const useStyles = makeStyles((theme) => ({
     ...theme.typography.tab,
     minWidth: 10,
     marginLeft: "25px",
+    textDecoration: "none",
   },
 
   button: {
@@ -236,7 +237,9 @@ export default function Header(props) {
           }
           break;
         case "/estimate":
-          props.setValue(5);
+          if (props.value !== 5) {
+            props.setValue(5);
+          }
           break;
         default:
           break;
@@ -256,7 +259,7 @@ export default function Header(props) {
             key={`${route}${index}`}
             className={classes.tab}
             component={Link}
-            to={route.link}
+            href={route.link}
             label={route.name}
             aria-owns={route.ariaOwns}
             aria-haspopup={route.ariaPopup}
@@ -267,7 +270,7 @@ export default function Header(props) {
       <Button
         className={classes.button}
         component={Link}
-        to="/estimate"
+        href="/estimate"
         variant="contained"
         color="secondary"
         onClick={() => props.setValue(5)}
@@ -291,7 +294,7 @@ export default function Header(props) {
           <MenuItem
             key={option.name}
             component={Link}
-            to={option.link}
+            href={option.link}
             classes={{ root: classes.menuItem }}
             onClick={(event) => {
               handleMenuItemClick(event, i);
@@ -389,7 +392,7 @@ export default function Header(props) {
           <Toolbar disableGutters>
             <Button
               component={Link}
-              to="/"
+              href="/"
               disableRipple
               onClick={() => {
                 setOpenDrawer(false);

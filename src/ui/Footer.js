@@ -1,8 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Link from "../src/Link";
-import footerAdornment from "../../assets/Footer Adornment.svg";
+import Link from "../Link";
+import Hidden from "@material-ui/core/Hidden";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -128,7 +128,7 @@ export default function Footer(props) {
                   props.setSelectedIndex(3);
                 }}
                 className={classes.link}
-                to="/websites"
+                href="/websites"
               >
                 Website Development
               </Grid>
@@ -150,7 +150,7 @@ export default function Footer(props) {
                 onClick={() => props.setValue(2)}
                 component={Link}
                 className={classes.link}
-                to="/revolution"
+                href="/revolution"
               >
                 Vision
               </Grid>
@@ -181,7 +181,7 @@ export default function Footer(props) {
                 component={Link}
                 onClick={() => props.setValue(3)}
                 className={classes.link}
-                to="/about"
+                href="/about"
               >
                 About Us
               </Grid>
@@ -224,7 +224,7 @@ export default function Footer(props) {
       <Grid item>
         <img
           alt="black decorative slash"
-          src={footerAdornment}
+          src="/assets/footerAdornment.svg"
           className={classes.adornment}
         />
       </Grid>
