@@ -56,7 +56,7 @@ export default createMuiTheme({
     },
     h6: {
       fontWeight: 500,
-      fontFamily: "Raleway",
+      fontFamily: "pacifico",
       color: black,
       lineHeight: 1,
     },

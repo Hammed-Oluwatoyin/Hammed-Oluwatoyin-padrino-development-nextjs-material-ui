@@ -6,7 +6,7 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import ButtonArrow from "../src/ui/ButtonArrow";
 import Typography from "@material-ui/core/Typography";
-
+import Head from "next/head";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -160,6 +160,23 @@ export default function LandingPage(props) {
 
   return (
     <Grid container direction="column" className={classes.mainContainer}>
+      <Head>
+        <title key="title">
+          Custom Software, Mobile Apps, and Websites | Padrino Development
+        </title>
+        <meta
+          name="description"
+          key="description"
+          content="Pristine software custom-designed from the ground up with cutting-edge optimizations. Use our free estimate calculator to check your project cost!"
+        />
+        <meta
+          property="og:title"
+          content="Bringing High Fidelity Technology to the West Africa | Padrino Development"
+          key="og:title"
+        />
+        <meta property="og:url" key="og:url" content="padrino.com" />
+        <link rel="canonical" key="canonical" href="padrino.com" />
+      </Head>
       <Grid item>
         {/* {-----Hero Block------} */}
         <Grid container justify="flex-end" alignItems="center" direction="row">
@@ -175,6 +192,7 @@ export default function LandingPage(props) {
             >
               <Grid item>
                 <Button
+                  style={{ textDecoration: "none" }}
                   component={Link}
                   href="/estimate"
                   className={classes.estimateButton}
@@ -186,6 +204,7 @@ export default function LandingPage(props) {
               </Grid>
               <Grid item>
                 <Button
+                  style={{ textDecoration: "none" }}
                   className={classes.learnButtonHero}
                   component={Link}
                   href="/revolution"
@@ -232,6 +251,7 @@ export default function LandingPage(props) {
               <span className={classes.specialText}>celebration</span>
             </Typography>
             <Button
+              style={{ textDecoration: "none" }}
               variant="outlined"
               component={Link}
               href="/customsoftware"
@@ -284,6 +304,7 @@ export default function LandingPage(props) {
               {matchesSM ? null : <br />}
             </Typography>
             <Button
+              style={{ textDecoration: "none" }}
               variant="outlined"
               component={Link}
               href="/mobileapps"
@@ -335,6 +356,7 @@ export default function LandingPage(props) {
               Optimized for Search Engines, built for speed
             </Typography>
             <Button
+              style={{ textDecoration: "none" }}
               variant="outlined"
               component={Link}
               href="/websites"
@@ -388,6 +410,7 @@ export default function LandingPage(props) {
                     recipe for revolution
                   </Typography>
                   <Button
+                    style={{ textDecoration: "none" }}
                     className={classes.learnButtonHero}
                     variant="outlined"
                     component={Link}
@@ -448,6 +471,7 @@ export default function LandingPage(props) {
                   </Typography>
                   <Grid item>
                     <Button
+                      style={{ textDecoration: "none" }}
                       variant="outlined"
                       component={Link}
                       href="/about"
@@ -481,6 +505,7 @@ export default function LandingPage(props) {
                   </Typography>
                   <Grid item>
                     <Button
+                      style={{ textDecoration: "none" }}
                       component={Link}
                       href="/contact"
                       variant="outlined"

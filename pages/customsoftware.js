@@ -7,7 +7,7 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Hidden from "@material-ui/core/Hidden";
-
+import Head from "next/head";
 import documentsAnimation from "../public/animations/documentsAnimation/data";
 import scaleAnimation from "../public/animations/scaleAnimation/data";
 import automationAnimation from "../public/animations/automationAnimation/data";
@@ -80,6 +80,31 @@ export default function CustomSoftware(props) {
 
   return (
     <Grid container direction="column">
+      <Head>
+        <title key="title">
+          Custom Software Development and Design - Free Estimate
+        </title>
+        <meta
+          name="description"
+          key="description"
+          content="Cutting-edge custom software development with gorgeous designs from scratch - let us optimize your business, solving problems instead of creating new ones."
+        />
+        <meta
+          property="og:title"
+          content="Bringing High Fidelity Technology to the West Africa | Custom Software Development"
+          key="og:title"
+        />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="padrino.com/customsoftware"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="padrino.com/customsoftware"
+        />
+      </Head>
       {/* Custom Software Block start*/}
 
       <Grid

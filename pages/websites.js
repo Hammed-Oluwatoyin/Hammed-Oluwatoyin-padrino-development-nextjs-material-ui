@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Link from "../src/Link";
-
+import Head from "next/head";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -39,6 +39,11 @@ export default function Websites(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <Grid container direction="column">
+      <Head>
+        <tite key="title">
+          Stunning Custom Website Design | Padrino Development
+        </tite>
+      </Head>
       {/**Website development block Start */}
       <Grid
         item

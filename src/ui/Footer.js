@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Link from "../Link";
+import Link from "@material-ui/core/Link";
 import Hidden from "@material-ui/core/Hidden";
 
 const useStyles = makeStyles((theme) => ({
@@ -71,6 +71,7 @@ export default function Footer(props) {
           <Grid item className={classes.gridItem}>
             <Grid container direction="column" spacing={2}>
               <Grid
+                style={{ textDecoration: "none" }}
                 item
                 component={Link}
                 onClick={() => props.setValue(0)}
@@ -85,6 +86,7 @@ export default function Footer(props) {
           <Grid item className={classes.gridItem}>
             <Grid container direction="column" spacing={2}>
               <Grid
+                style={{ textDecoration: "none" }}
                 item
                 component={Link}
                 href="/services"
@@ -97,6 +99,7 @@ export default function Footer(props) {
                 Services
               </Grid>
               <Grid
+                style={{ textDecoration: "none" }}
                 item
                 component={Link}
                 href="/customsoftware"
@@ -109,6 +112,7 @@ export default function Footer(props) {
                 Custom Software Development
               </Grid>
               <Grid
+                style={{ textDecoration: "none" }}
                 item
                 component={Link}
                 onClick={() => {
@@ -121,6 +125,7 @@ export default function Footer(props) {
                 IOS/Android App Development
               </Grid>
               <Grid
+                style={{ textDecoration: "none" }}
                 item
                 component={Link}
                 onClick={() => {
@@ -137,6 +142,7 @@ export default function Footer(props) {
           <Grid item className={classes.gridItem}>
             <Grid container direction="column" spacing={2}>
               <Grid
+                style={{ textDecoration: "none" }}
                 item
                 component={Link}
                 onClick={() => props.setValue(2)}
@@ -146,6 +152,7 @@ export default function Footer(props) {
                 The Revolution
               </Grid>
               <Grid
+                style={{ textDecoration: "none" }}
                 item
                 onClick={() => props.setValue(2)}
                 component={Link}
@@ -155,6 +162,7 @@ export default function Footer(props) {
                 Vision
               </Grid>
               <Grid
+                style={{ textDecoration: "none" }}
                 item
                 onClick={() => props.setValue(2)}
                 component={Link}
@@ -164,6 +172,7 @@ export default function Footer(props) {
                 Technology
               </Grid>
               <Grid
+                style={{ textDecoration: "none" }}
                 item
                 component={Link}
                 onClick={() => props.setValue(2)}
@@ -177,6 +186,7 @@ export default function Footer(props) {
           <Grid item className={classes.gridItem}>
             <Grid container direction="column" spacing={2}>
               <Grid
+                style={{ textDecoration: "none" }}
                 item
                 component={Link}
                 onClick={() => props.setValue(3)}
@@ -186,6 +196,7 @@ export default function Footer(props) {
                 About Us
               </Grid>
               <Grid
+                style={{ textDecoration: "none" }}
                 item
                 onClick={() => props.setValue(3)}
                 component={Link}
@@ -195,6 +206,7 @@ export default function Footer(props) {
                 History
               </Grid>
               <Grid
+                style={{ textDecoration: "none" }}
                 onClick={() => props.setValue(3)}
                 item
                 component={Link}
@@ -208,6 +220,7 @@ export default function Footer(props) {
           <Grid item className={classes.gridItem}>
             <Grid container direction="column" spacing={2}>
               <Grid
+                style={{ textDecoration: "none" }}
                 item
                 component={Link}
                 onClick={() => props.setValue(4)}

@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "@material-ui/core/Link";
+import Link from "../Link";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     height: 45,
     width: 145,
     padding: 5,
+
     [theme.breakpoints.down("sm")]: {
       marginBottom: "2em",
     },
@@ -91,6 +92,7 @@ export default function CallToAction(props) {
             <Grid item>
               <Grid container justify={matchesSM ? "center" : undefined}>
                 <Button
+                  style={{ textDecoration: "none" }}
                   variant="outlined"
                   component={Link}
                   href="/revolution"
@@ -113,6 +115,7 @@ export default function CallToAction(props) {
       </Grid>
       <Grid item>
         <Button
+          style={{ textDecoration: "none" }}
           component={Link}
           href="/estimate"
           variant="contained"

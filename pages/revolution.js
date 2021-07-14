@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Lottie from "react-lottie";
+import Head from "next/head";
 import Typography from "@material-ui/core/Typography";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
@@ -36,6 +37,23 @@ export default function Revolution() {
 
   return (
     <Grid container direction="column">
+      <Head>
+        <title key="title">
+          The Revolution - Cutting Edge Software | Arc Development
+        </title>
+        <meta
+          name="description"
+          key="description"
+          content="Visionary insights, coupled with cutting-edge technology, is a recipe for revolution. Get a free online estimate instantly!"
+        />
+        <meta
+          property="og:title"
+          content="Bringing High Fidelity Technology to the West Africa | The Revolution"
+          key="og:title"
+        />
+        <meta property="og:url" key="og:url" content="arc.com/revolution" />
+        <link rel="canonical" key="canonical" href="arc.com/revolution" />
+      </Head>
       {/**Revolution title Block Start */}
       <Grid item className={classes.rowContainer} style={{ marginTop: "2em" }}>
         <Typography

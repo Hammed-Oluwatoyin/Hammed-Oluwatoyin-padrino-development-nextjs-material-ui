@@ -9,6 +9,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import ButtonArrow from "../src/ui/ButtonArrow";
+import Head from "next/head";
 
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Snackbar from "@material-ui/core/Snackbar";
@@ -192,6 +193,25 @@ export default function Contact(props) {
 
   return (
     <Grid container direction="row">
+      <Head>
+        <title key="title">Contact Us | Padrino Development</title>
+        <meta
+          name="description"
+          key="description"
+          content="Let us guide you through the custom software design and development process. Send us a message with any of your ideas or questions to get started!"
+        />
+        <meta
+          property="og:title"
+          content="Bringing High Fidelity Technology to the West Africa | Contact Us"
+          key="og:title"
+        />
+        <meta property="og:url" key="og:url" content="padrino.com/contact" />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://padrino.com/contact.js"
+        />
+      </Head>
       <Grid
         item
         container
@@ -486,7 +506,7 @@ export default function Contact(props) {
         container
         direction={matchesMD ? "column" : "row"}
         className={classes.background}
-        justify={matchesMD ? "center" : undefined}
+        justify="center"
         lg={8}
         xl={9}
         alignItems="center"
@@ -515,6 +535,7 @@ export default function Contact(props) {
               <Grid item>
                 <Grid container justify={matchesMD ? "center" : undefined}>
                   <Button
+                    style={{ textDecoration: "none" }}
                     variant="outlined"
                     component={Link}
                     href="/revolution"
@@ -537,6 +558,7 @@ export default function Contact(props) {
         </Grid>
         <Grid item>
           <Button
+            style={{ textDecoration: "none" }}
             component={Link}
             href="/estimate"
             variant="contained"

@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Link from "../src/Link";
+import Head from "next/head";
 import Button from "@material-ui/core/Button";
 import ButtonArrow from "../src/ui/ButtonArrow";
 import Grid from "@material-ui/core/Grid";
@@ -56,6 +57,23 @@ export default function Services(props) {
 
   return (
     <Grid container direction="column">
+      <Head>
+        <title key="title">
+          Top Custom Software Development Services | Padrino Development
+        </title>
+        <meta
+          name="description"
+          key="description"
+          content="Cutting-edge software, mobile app, and website development services with sleek custom designs - get a free online estimate instantly!"
+        />
+        <meta
+          property="og:title"
+          content="Bringing High Fidelity Technology to the West Africa | Services"
+          key="og:title"
+        />
+        <meta property="og:url" key="og:url" content="padrino.com/services" />
+        <link rel="canonical" key="canonical" href="padrino.com/services" />
+      </Head>
       <Grid
         item
         style={{
@@ -97,6 +115,7 @@ export default function Services(props) {
               {matchesSM ? null : <br />}
             </Typography>
             <Button
+              style={{ textDecoration: "none" }}
               variant="outlined"
               component={Link}
               href="/mobileapps"
@@ -150,6 +169,7 @@ export default function Services(props) {
               <span className={classes.specialText}>celebration</span>
             </Typography>
             <Button
+              style={{ textDecoration: "none" }}
               variant="outlined"
               component={Link}
               href="/customsoftware"
@@ -202,6 +222,7 @@ export default function Services(props) {
               Optimized for Search Engines, built for speed
             </Typography>
             <Button
+              style={{ textDecoration: "none" }}
               variant="outlined"
               component={Link}
               href="/websites"

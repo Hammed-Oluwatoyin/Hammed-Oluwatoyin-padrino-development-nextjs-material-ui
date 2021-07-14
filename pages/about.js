@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import Head from "next/head";
 import Typography from "@material-ui/core/Typography";
 import Hidden from "@material-ui/core/Hidden";
 import Avatar from "@material-ui/core/Avatar";
@@ -44,6 +45,23 @@ export default function About(props) {
 
   return (
     <Grid container direction="column">
+      <Head>
+        <title key="title">
+          About Us - History & Team | Padrino Development
+        </title>
+        <meta
+          name="description"
+          key="description"
+          content="We provide the fastest, most modern, affordable, and aesthetic software design and development services in the Midwest. Get a free online estimate now!"
+        />
+        <meta
+          property="og:title"
+          content="Bringing High Fidelity Technology to the West Africa | About Us"
+          key="og:title"
+        />
+        <meta property="og:url" key="og:url" content="padrino.com/about" />
+        <link rel="canonical" key="canonical" href="padrino.com/about" />
+      </Head>
       {/**Mission Statement Section Start */}
       <Grid
         item

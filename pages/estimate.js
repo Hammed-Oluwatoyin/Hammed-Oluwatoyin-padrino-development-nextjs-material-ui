@@ -4,7 +4,7 @@ import { cloneDeep } from "lodash";
 import Lottie from "react-lottie";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-
+import Head from "next/head";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
@@ -108,7 +108,7 @@ const softwareQuestions = [
         id: 2,
         title: "iOS Application",
         subtitle: null,
-        icon: "/assets/iPhone.svg",
+        icon: "/assets/iphone.svg",
         iconAlt: "outline of iphone",
         selected: false,
         cost: 100,
@@ -771,6 +771,23 @@ export default function Estimate() {
 
   return (
     <Grid container direction="row">
+      <Head>
+        <title key="title">
+          Free Custom Software Estimate | Padrino Development
+        </title>
+        <meta
+          name="description"
+          key="description"
+          content="Use our free online estimate calculator to instantly check the cost of your custom software, mobile app, or website design and development project!"
+        />
+        <meta
+          property="og:title"
+          content="Bringing High Fidelity Technology to the West Africa | Free Estimate"
+          key="og:title"
+        />
+        <meta property="og:url" key="og:url" content="padrino.com/estimate" />
+        <link rel="canonical" key="canonical" href="padrino.com/estimate" />
+      </Head>
       <Grid
         item
         container
@@ -885,7 +902,7 @@ export default function Estimate() {
           justify="space-between"
           style={{ width: "18em", marginTop: "3em" }}
         >
-          <Grid item>
+          <Grid item style={{ marginRight: "6em" }}>
             <IconButton
               disabled={navigationPreviousDisabled()}
               onClick={previousQuestion}
@@ -915,7 +932,7 @@ export default function Estimate() {
               />
             </IconButton>
           </Grid>
-          <Grid item style={{ marginLeft: matchesSM ? "1.8em" : 0 }}>
+          <Grid item style={{ marginLeft: "1.8em" }}>
             <Button
               disabled={estimateDisabled()}
               variant="contained"
