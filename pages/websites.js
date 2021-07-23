@@ -40,9 +40,21 @@ export default function Websites(props) {
   return (
     <Grid container direction="column">
       <Head>
-        <tite key="title">
+        <title key="title">
           Stunning Custom Website Design | Padrino Development
-        </tite>
+        </title>
+        <meta
+          name="description"
+          key="description"
+          content="Completely custom designed and built from scratch to be blazing fast. Optimized code, server-side rendering, and perfect responsive design | 99% PageSpeed Score"
+        />
+        <meta
+          property="og:title"
+          content="Bringing West Coast Technology to the Midwest | Websites"
+          key="og:title"
+        />
+        <meta property="og:url" key="og:url" content="padrino.com/websites" />
+        <link rel="canonical" key="canonical" href="padrino.com/websites" />
       </Head>
       {/**Website development block Start */}
       <Grid
@@ -76,7 +88,7 @@ export default function Websites(props) {
         <Grid item container direction="column" className={classes.heading}>
           <Grid item>
             <Typography align={matchesMD ? "center" : undefined} variant="h2">
-              iOS/Android App Development
+              Websites Development
             </Typography>
           </Grid>
           <Grid item>
@@ -154,7 +166,7 @@ export default function Websites(props) {
         >
           <Typography
             variant="body1"
-            paragragh
+            paragragh="true"
             align={matchesSM ? "center" : undefined}
           >
             Knowledge is power, and data is 21st Century gold. Analyzing this

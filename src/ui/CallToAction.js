@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     height: "60em",
     width: "100%",
     [theme.breakpoints.down("md")]: {
-      backgroundImage: `url("/assets/mobileBackround.jpg")`,
+      backgroundImage: `url("/assets/mobileBackground.jpg")`,
       backgroundAttachmnet: "inherit",
     },
   },

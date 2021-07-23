@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { cloneDeep } from "lodash";
 
 import Lottie from "react-lottie";
@@ -313,6 +313,8 @@ export default function Estimate() {
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
+  const myRef = useRef(null);
+
   const [questions, setQuestions] = useState(defaultQuestions);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [name, setName] = useState("");
@@ -377,6 +379,9 @@ export default function Estimate() {
   };
 
   const nextQuestion = () => {
+    if (matchesSM) {
+      window.scrollTo(0, myRef.current.offsetTop + 75);
+    }
     const newQuestions = cloneDeep(questions);
 
     const currentlyActive = newQuestions.filter((question) => question.active);
@@ -390,6 +395,9 @@ export default function Estimate() {
   };
 
   const previousQuestion = () => {
+    if (matchesSM) {
+      window.scrollTo(0, myRef.current.offsetTop + 75);
+    }
     const newQuestions = cloneDeep(questions);
 
     const currentlyActive = newQuestions.filter((question) => question.active);
@@ -454,6 +462,9 @@ export default function Estimate() {
 
     switch (newSelected.title) {
       case "Custom Software Development":
+        if (matchesSM) {
+          window.scrollTo(0, myRef.current.offsetTop + 75);
+        }
         setQuestions(softwareQuestions);
         setService(newSelected.title);
         setPlatforms([]);
@@ -464,6 +475,9 @@ export default function Estimate() {
         break;
 
       case "iOS/Android App Development":
+        if (matchesSM) {
+          window.scrollTo(0, myRef.current.offsetTop + 75);
+        }
         setQuestions(softwareQuestions);
         setService(newSelected.title);
         setPlatforms([]);
@@ -474,6 +488,9 @@ export default function Estimate() {
 
         break;
       case "Website Development":
+        if (matchesSM) {
+          window.scrollTo(0, myRef.current.offsetTop + 75);
+        }
         setQuestions(websiteQuestions);
         setService(newSelected.title);
         setPlatforms([]);
@@ -632,8 +649,17 @@ export default function Estimate() {
     let disabled = true;
 
     const emptySelections = questions
+      .filter(
+        (question) => question.title !== "Which features do you expect to use?"
+      )
       .map((question) => question.options.filter((option) => option.selected))
       .filter((question) => question.length === 0);
+
+    const featuresSelected = questions
+      .filter(
+        (question) => question.title === "Which features do you expect to use?"
+      )
+      .map((question) => question.options.filter((option) => option.selected));
 
     if (questions.length === 2) {
       if (emptySelections.length === 1) {
@@ -641,12 +667,7 @@ export default function Estimate() {
       }
     } else if (questions.length === 1) {
       disabled = true;
-    } else if (
-      emptySelections.length < 2 &&
-      questions[questions.length - 1].options.filter(
-        (option) => option.selected
-      ).length > 0
-    ) {
+    } else if (emptySelections.length === 1 && featuresSelected.length > 0) {
       disabled = false;
     }
     return disabled;
@@ -827,7 +848,7 @@ export default function Estimate() {
           .filter((question) => question.active)
           .map((question, index) => (
             <React.Fragment key={index}>
-              <Grid item>
+              <Grid item ref={myRef}>
                 <Typography
                   variant="h2"
                   align="center"
