@@ -172,8 +172,16 @@ export default function Revolution() {
           content="Bringing High Fidelity Technology to the West Africa | The Revolution"
           key="og:title"
         />
-        <meta property="og:url" key="og:url" content="padrino.com/revolution" />
-        <link rel="canonical" key="canonical" href="padrino.com/revolution" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="padrino.vercel.app/revolution"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="padrino.vercel.app/revolution"
+        />
       </Head>
       <Grid
         item

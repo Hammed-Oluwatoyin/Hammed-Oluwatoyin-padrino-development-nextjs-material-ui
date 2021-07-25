@@ -178,8 +178,8 @@ export default function LandingPage(props) {
           content="Bringing High Fidelity Technology to the West Africa | Padrino Development"
           key="og:title"
         />
-        <meta property="og:url" key="og:url" content="padrino.com" />
-        <link rel="canonical" key="canonical" href="padrino.com" />
+        <meta property="og:url" key="og:url" content="padrino.vercel.app" />
+        <link rel="canonical" key="canonical" href="padrino.vercel.app" />
       </Head>
       <Grid item>
         {/* {-----Hero Block------} */}

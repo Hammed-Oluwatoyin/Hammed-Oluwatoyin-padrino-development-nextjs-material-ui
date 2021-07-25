@@ -4,7 +4,7 @@ const formatDate = require("./formatDate");
 
 // ROBOTS.txt
 const robotsTxt = `User-agent: *
-Sitemap: https://arcsoftwaredevelopment.com/sitemap_local.xml
+Sitemap: https://padrino.vercel.app/sitemap_local.xml
 Disallow:`;
 
 fs.writeFileSync("public/robots.txt", robotsTxt);
@@ -16,14 +16,14 @@ const today = formatDate(new Date());
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${Object.keys(pathsObj)
-    .filter(path => path !== "/_document" && path !== "/_app")
+    .filter((path) => path !== "/_document" && path !== "/_app")
 
     .map(
-      path => `<url>
+      (path) => `<url>
     ${
       path === "/index"
-        ? `<loc>https://arcsoftwaredevelopment.com</loc>`
-        : `<loc>https://arcsoftwaredevelopment.com${path}</loc>`
+        ? `<loc>https://padrino.vercel.app</loc>`
+        : `<loc>https://padrino.vercel.app${path}</loc>`
     }
     <lastmod>${
       pathsObj[path].lastModified
@@ -36,4 +36,3 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 
 fs.writeFileSync("public/sitemap_local.xml", sitemapXml);
 console.log("sitemap_local.xml saved!");
-

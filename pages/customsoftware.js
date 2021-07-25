@@ -97,12 +97,12 @@ export default function CustomSoftware(props) {
         <meta
           property="og:url"
           key="og:url"
-          content="padrino.com/customsoftware"
+          content="padrino.vercel.app/customsoftware"
         />
         <link
           rel="canonical"
           key="canonical"
-          href="padrino.com/customsoftware"
+          href="padrino.vercel.app/customsoftware"
         />
       </Head>
       {/* Custom Software Block start*/}

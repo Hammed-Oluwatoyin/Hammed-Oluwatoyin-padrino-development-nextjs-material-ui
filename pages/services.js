@@ -71,8 +71,16 @@ export default function Services(props) {
           content="Bringing High Fidelity Technology to the West Africa | Services"
           key="og:title"
         />
-        <meta property="og:url" key="og:url" content="padrino.com/services" />
-        <link rel="canonical" key="canonical" href="padrino.com/services" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="padrino.vercel.app/services"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="padrino.vercel.app/services"
+        />
       </Head>
       <Grid
         item

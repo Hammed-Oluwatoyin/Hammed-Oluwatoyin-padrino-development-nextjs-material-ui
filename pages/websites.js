@@ -53,8 +53,16 @@ export default function Websites(props) {
           content="Bringing West Coast Technology to the Midwest | Websites"
           key="og:title"
         />
-        <meta property="og:url" key="og:url" content="padrino.com/websites" />
-        <link rel="canonical" key="canonical" href="padrino.com/websites" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="padrino.vercel.app/websites"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="padrino.vercel.app/websites"
+        />
       </Head>
       {/**Website development block Start */}
       <Grid

@@ -59,8 +59,12 @@ export default function About(props) {
           content="Bringing High Fidelity Technology to the West Africa | About Us"
           key="og:title"
         />
-        <meta property="og:url" key="og:url" content="padrino.com/about" />
-        <link rel="canonical" key="canonical" href="padrino.com/about" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="padrino.vercel.app/about"
+        />
+        <link rel="canonical" key="canonical" href="padrino.vercel.app/about" />
       </Head>
       {/**Mission Statement Section Start */}
       <Grid

@@ -806,8 +806,16 @@ export default function Estimate() {
           content="Bringing High Fidelity Technology to the West Africa | Free Estimate"
           key="og:title"
         />
-        <meta property="og:url" key="og:url" content="padrino.com/estimate" />
-        <link rel="canonical" key="canonical" href="padrino.com/estimate" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="padrino.vercel.app/estimate"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="padrino.vercel.app/estimate"
+        />
       </Head>
       <Grid
         item

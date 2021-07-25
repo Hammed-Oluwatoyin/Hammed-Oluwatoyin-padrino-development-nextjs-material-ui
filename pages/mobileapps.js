@@ -62,8 +62,16 @@ export default function MobileApps(props) {
           content="Bringing High Fidelity Technology to the West Africa | iOS/Android App Development"
           key="og:title"
         />
-        <meta property="og:url" key="og:url" content="padrino.com/mobileapps" />
-        <link rel="canonical" key="canonical" href="padrino.com/mobileapps" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="padrino.vercel.app/mobileapps"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="padrino.vercel.app/mobileapps"
+        />
       </Head>
       {/* Custom Software Block start*/}
 

@@ -205,11 +205,15 @@ export default function Contact(props) {
           content="Bringing High Fidelity Technology to the West Africa | Contact Us"
           key="og:title"
         />
-        <meta property="og:url" key="og:url" content="padrino.com/contact" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="padrino.vercel.app/contact"
+        />
         <link
           rel="canonical"
           key="canonical"
-          href="https://padrino.com/contact.js"
+          href="https://padrino.vercel.app/contact.js"
         />
       </Head>
       <Grid
