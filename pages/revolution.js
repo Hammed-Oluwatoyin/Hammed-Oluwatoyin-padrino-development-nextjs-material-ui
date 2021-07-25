@@ -8,6 +8,10 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import technologyAnimation from "../public/animations/technologyAnimation/data";
 import CallToAction from "../src/ui/CallToAction";
+import {
+  LazyLoadImage,
+  LazyLoadComponent,
+} from "react-lazy-load-image-component";
 
 const useStyles = makeStyles((theme) => ({
   rowContainer: {
@@ -57,7 +61,7 @@ export default function Revolution() {
     {
       icon: "/assets/mockupIcon.svg",
       iconAlt: "basic website design outline",
-      iconMaxWidth: 1000,
+      iconMaxWidth: 700,
       backgroundColor: "#FF7373",
       title: "Mockup",
       paragraphs: [
@@ -69,7 +73,7 @@ export default function Revolution() {
     {
       icon: "/assets/reviewIcon.svg",
       iconAlt: "magnifying glass",
-      iconMaxWidth: "50em",
+      iconMaxWidth: 700,
       backgroundColor: "#39B54A",
       title: "Review",
       paragraphs: [
@@ -81,7 +85,7 @@ export default function Revolution() {
     {
       icon: "/assets/designIcon.svg",
       iconAlt: "paintbrush leaving stroke of paint",
-      iconMaxWidth: 1000,
+      iconMaxWidth: 700,
       backgroundColor: "#A67C52",
       title: "Design",
       paragraphs: [
@@ -92,7 +96,7 @@ export default function Revolution() {
     {
       icon: "/assets/reviewIcon.svg",
       iconAlt: "magnifying glass",
-      iconMaxWidth: "50em",
+      iconMaxWidth: 700,
       backgroundColor: "#39B54A",
       title: "Review",
       paragraphs: [
@@ -103,7 +107,7 @@ export default function Revolution() {
     {
       icon: "/assets/buildIcon.svg",
       iconAlt: "building construction site",
-      iconMaxWidth: { maxWidth: matchesMD ? 700 : 1000 },
+      iconMaxWidth: { maxWidth: matchesMD ? 500 : 1000 },
       backgroundColor: "#FBB03B",
       title: "Build",
       paragraphs: [
@@ -143,6 +147,7 @@ export default function Revolution() {
       iconAlt: "falling dominoes",
       backgroundColor: "#29ABE2",
       title: "Iterate",
+      iconMaxWidth: 500,
       paragraphs: [
         `The cycle repeats whenever you come up with a new idea for extending your current project, or come up with a brand new system entirely.`,
         `By planning for future features and changes we can build and evolve your application over time. As new use cases and customer needs develop we can respond with continuous integration of new content.`,
@@ -177,7 +182,7 @@ export default function Revolution() {
       >
         <Typography
           align={matchesMD ? "center" : undefined}
-          variant="h1"
+          variant={matchesSM ? "h2" : "h1"}
           style={{ fontFamily: "Pacifico" }}
         >
           The Revolution
@@ -415,7 +420,8 @@ export default function Revolution() {
             </Grid>
           </Grid>
           <Grid item lg style={{ alignSelf: "center" }}>
-            <img
+            <LazyLoadImage
+              threshold={400}
               src={section.icon}
               alt={section.iconAlt}
               width="100%"

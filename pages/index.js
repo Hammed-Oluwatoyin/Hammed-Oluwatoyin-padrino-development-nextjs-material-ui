@@ -14,6 +14,10 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import CallToAction from "../src/ui/CallToAction";
 
 import landingAnimationData from "../public/animations/landinganimation/data.json";
+import {
+  LazyLoadImage,
+  LazyLoadComponent,
+} from "react-lazy-load-image-component";
 
 const useStyles = makeStyles((theme) => ({
   animation: {
@@ -270,7 +274,7 @@ export default function LandingPage(props) {
             </Button>
           </Grid>
           <Grid item>
-            <img
+            <LazyLoadImage
               alt="custom software icon"
               src="/assets/customSoftwareIcon.svg"
               className={classes.icon}
@@ -323,7 +327,7 @@ export default function LandingPage(props) {
             </Button>
           </Grid>
           <Grid item style={{ marginRight: matchesSM ? 0 : "5em" }}>
-            <img
+            <LazyLoadImage
               alt="mobile phone icon"
               src="/assets/mobileIcon.svg"
               className={classes.icon}
@@ -375,7 +379,7 @@ export default function LandingPage(props) {
             </Button>
           </Grid>
           <Grid item>
-            <img
+            <LazyLoadImage
               alt="website icon"
               src="/assets/websiteIcon.svg"
               className={classes.icon}
@@ -430,7 +434,9 @@ export default function LandingPage(props) {
               </Grid>
             </CardContent>
           </Card>
-          <div className={classes.revolutionBackground} />
+          <LazyLoadComponent threshold={500}>
+            <div className={classes.revolutionBackground} />
+          </LazyLoadComponent>
         </Grid>
       </Grid>
       {/* {-----Revolution Block end} */}
@@ -524,15 +530,18 @@ export default function LandingPage(props) {
               </Grid>
             </Grid>
           </Grid>
-
-          <div className={classes.infoBackground} />
+          <LazyLoadComponent threshold={700}>
+            <div className={classes.infoBackground} />
+          </LazyLoadComponent>
         </Grid>
       </Grid>
 
       {/* {-----Information Block end} */}
       {/* {-----Call To Action Block Start} */}
       <Grid item>
-        <CallToAction setValue={setValue} />
+        <LazyLoadComponent threshold={700}>
+          <CallToAction setValue={setValue} />
+        </LazyLoadComponent>
       </Grid>
 
       {/* {-----Call To Action Block end} */}

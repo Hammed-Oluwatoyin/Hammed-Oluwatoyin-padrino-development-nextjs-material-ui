@@ -5,6 +5,10 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "../src/ui/theme";
 import Header from "../src/ui/Header";
 import Footer from "../src/ui/Footer";
+import {
+  LazyLoadImage,
+  LazyLoadComponent,
+} from "react-lazy-load-image-component";
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
@@ -42,7 +46,9 @@ export default function MyApp(props) {
           setValue={setValue}
           setSelectedIndex={setSelectedIndex}
         />
-        <Footer setValue={setValue} setSelectedIndex={setSelectedIndex} />
+        <LazyLoadComponent>
+          <Footer setValue={setValue} setSelectedIndex={setSelectedIndex} />
+        </LazyLoadComponent>
       </ThemeProvider>
     </React.Fragment>
   );
