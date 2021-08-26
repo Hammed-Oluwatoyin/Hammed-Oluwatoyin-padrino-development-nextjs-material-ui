@@ -7,6 +7,7 @@ import Tab from "@material-ui/core/Tab";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import { makeStyles } from "@material-ui/core/styles";
 import Link from "@material-ui/core/Link";
+import Hidden from "@material-ui/core/Hidden";
 
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -653,7 +654,8 @@ export default function Header(props) {
                 />
               </svg>
             </Button>
-            {matches ? drawer : tabs}
+            <Hidden mdDown>{tabs}</Hidden>
+            <Hidden lgUp>{drawer}</Hidden>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
